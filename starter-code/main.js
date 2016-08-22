@@ -6,9 +6,26 @@ var cardTwo = "queen";
 var cardThree = "king";
 var cardFour = "king";
 
-if (cardThree === cardFour) {
-	alert("You found a match!");
+var maxCards = 4;
+
+// if (cardThree === cardFour) {
+// 	alert("You found a match!");
+// }
+// else {
+// 	alert("Sorry, try again!");
+// }
+
+var gameBoard = document.getElementById("game-board");
+
+var createBoard = function(maxCards) {
+
+	for (var i = 0; i < maxCards; i++) {
+		var newCard = document.createElement("div");
+		newCard.className = "card";
+
+		gameBoard.appendChild(newCard);
+	}
+
 }
-else {
-	alert("Sorry, try again!");
-}
+
+createBoard(maxCards);
